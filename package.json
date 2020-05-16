@@ -1,0 +1,46 @@
+{
+  "name": "cognito-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=10.16",
+    "npm": "6.11"
+  },
+  "files": [
+    "package.json",
+    "package-lock.json",
+    "lib/**/*"
+  ],
+  "directories": {},
+  "dependencies": {
+    "async-redis": "^1.1.7",
+    "ioredis": "^4.16.3",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "lint": "npx tslint --project tsconfig.json --out build/lint/lint.xml --format checkstyle",
+    "lint-dev": "npx tslint --project tsconfig.json --format stylish",
+    "clean-dev": "npm prune production",
+    "build": "npx tsc",
+    "test": "jest --detectOpenHandles",
+    "build:watch": "npx tsc --watch",
+    "package": "serverless package --package build/artifact"
+  },
+  "keywords": [],
+  "author": "cloudauto",
+  "license": "ISC",
+  "jest-junit": {
+    "outputDirectory": "build/coverage/juint/",
+    "usePathForSuiteName": "true"
+  }
+}

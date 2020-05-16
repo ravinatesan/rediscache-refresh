@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declaration":  true,
+    "esModuleInterop": true,
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "lib",
+    "baseUrl": ".",
+    "rootDir": "./"
+  },
+  "include": [
+    "src/**/*.ts",
+    "index.ts"
+  ],
+  "exclude": [
+    "./lib",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
