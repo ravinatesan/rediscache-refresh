@@ -27,5 +27,6 @@ exports.refresh = async (event, context) => {
         await Promise.all(promises);
     };
 
-    await asyncBlock()
+    await asyncBlock();
+    context.done(null, event);
 };
